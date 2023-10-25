@@ -7,7 +7,19 @@
 */
 
 function isPalindrome(str) {
-  return true;
+
+  const lowerStr= str.replace(/[\W_]+/g, '').toLowerCase()
+     var strLength = lowerStr.length;
+  for (var i = 0; i <=(strLength-1)/2; i++) {
+    //  console.log(lowerStr.charAt(i)+ " ->"+lowerStr.charAt(strLength-i-1))
+    if(lowerStr.charAt(i)!==lowerStr.charAt(strLength-i-1))
+    {
+        console.log(lowerStr[i]+ " right side "+ lowerStr[strLength-i-1])
+      return false
+    }
+  
+}
+return true;
 }
 
 module.exports = isPalindrome;

@@ -8,6 +8,11 @@
 */
 
 function isAnagram(str1, str2) {
+  const sortedStr1 = str1.replace(/\s/g,'').toLowerCase().split('').sort().join('')
+  const sortedStr2 = str2.replace(/\s/g,'').toLowerCase().split('').sort().join('')
+    // console.log(sortedStr1, sortedStr2)
+  return sortedStr1==sortedStr2
+
 
 }
 
